@@ -1,6 +1,8 @@
 describe "The truth" do
-  subject { :truth }
+  before do
+    @truth = :truth
+  end
   10_000.times do
-    it { is_expected.to_not eq nil }
+    it { expect(@truth).to_not eq nil }
   end
 end
